@@ -2,9 +2,9 @@
 
 declare(strict_types = 1);
 
-namespace CodelyTv\PhpBootstrapTest;
+namespace DiverSoft\Test;
 
-use CodelyTv\PhpBootstrap\Codelyber;
+use DiverSoft\Codelyber;
 use PHPUnit\Framework\TestCase;
 
 final class CodelyberTest extends TestCase
