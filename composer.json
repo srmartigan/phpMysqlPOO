@@ -1,28 +1,19 @@
 {
-    "name": "codelytv/php-bootstrap",
-    "description": "Starting point if you want to bootstrap a project in PHP following best practices.",
+    "name": "diversoft/phpmysqlpoo",
+    "description": "",
     "type": "project",
     "keywords": [
-        "bootstrap",
-        "skeleton",
-        "kata",
-        "TDD",
-        "boilerplate"
+        "php",
+        "poo"
     ],
-    "homepage": "https://codely.tv",
-    "time": "2018-07-18",
+    "homepage": "https://diversoft-game.com",
+    "time": "2019-09-13",
     "license": "MIT",
     "authors": [
         {
-            "name": "Javier Ferrer",
-            "email": "javier.ferrer@codely.tv",
-            "homepage": "https://codely.tv",
-            "role": "Developer"
-        },
-        {
-            "name": "Rafa Gómez",
-            "email": "rafa.gomez@codely.tv",
-            "homepage": "https://codely.tv",
+            "name": "Jonatan Iglesias",
+            "email": "srmartigan@gmail.com",
+            "homepage": "https://diversoft-game.com",
             "role": "Developer"
         }
     ],
@@ -34,12 +25,17 @@
         "jakub-onderka/php-console-highlighter": "^0.3",
         "squizlabs/php_codesniffer": "^3.3",
         "phpunit/phpunit": "^7.2",
-        "symfony/var-dumper": "^4.1"
+        "symfony/var-dumper": "^4.1",
+        "filp/whoops": "^2.0"
     },
     "autoload": {
         "psr-4": {
             "DiverSoft\\": "src/"
-        }
+        },
+        "files": [
+            "src/Config.php"
+        ]
+
     },
     "autoload-dev": {
         "psr-4": {

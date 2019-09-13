@@ -2,10 +2,9 @@
 
 
 namespace DiverSoft\Controller;
+require_once('../Config.php');
 
-use DiverSoft\Saludos;
-
-class myController
+class DataBase
 {
 
 }
