@@ -3,16 +3,35 @@
 
 namespace DiverSoft\Controller;
 
-require_once ('../vendor/autoload.php');
+use DiverSoft\DataBase;
+
 /**
  * Class ContactController
  * @package DiverSoft\Controller
  */
 class ContactController
 {
-    public function addContact(array $contact){
-        foreach ($contact as $key=>$datos) {
-            echo $key.' : '.$datos . '<br />';
-        }
+    private $dataBase;
+
+    public function __construct()
+    {
+        $this->dataBase = new DataBase();
+    }
+
+    public function addContact(array $contact)
+    {
+        $this->dataBase->addContact($contact);
+        header('Location:../public/createContact.php');
+    }
+
+    public function allContacts()
+    {
+        return $this->dataBase->allContacts();
+    }
+
+    public function delContact($idContact)
+    {
+        $this->dataBase->delContact($idContact);
+        header('Location:../public/listContact.php');
     }
 }

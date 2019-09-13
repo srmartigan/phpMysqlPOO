@@ -9,3 +9,9 @@ if (isset($_POST['contact']))
     $contactController = new ContactController();
     $contactController->addContact($contact);
 }
+
+if (isset($_GET['delete_contact'])) {
+    $idContact = $_GET['delete_contact'];
+    $contactController = new ContactController();
+    $contactController->delContact($idContact);
+}

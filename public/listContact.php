@@ -2,8 +2,8 @@
 require_once ('../vendor/autoload.php');
 require (TEMPLATES_PATH . "header.php");
 
-require (LIBRARY_PATH . "/DataBase.php");
-$contacts = getContacts();
+$dataBase = new DiverSoft\DataBase();
+$contacts = $dataBase->allContacts();
 ?>
 <div class="container">
     <div class="row " style="margin-top:20px">
@@ -25,7 +25,7 @@ $contacts = getContacts();
                         <td class="right">
                             <a href="#"><i class="material-icons" style="color:green">visibility</i></a>
                             <a href="#"><i class="material-icons" style="color:blue">edit</i></a>
-                            <a href= "../resources/library/deleteData.php?contact=<?php echo $contact['id'];?> ">
+                            <a href= "../src/Rutes.php?delete_contact=<?php echo $contact['id'];?> ">
                                 <i class="material-icons" style="color:red">delete_forever</i>
                             </a>
                         </td>

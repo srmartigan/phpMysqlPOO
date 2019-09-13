@@ -26,7 +26,7 @@ class Config
      */
     public static function getDataBaseMysql(): array
     {
-        return Self::dataBaseMysql;
+        return self::$dataBaseMysql;
     }
 
     public function __construct()
